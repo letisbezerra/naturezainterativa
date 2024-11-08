@@ -1,0 +1,82 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "SkySphere"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def "SkySphere" (
+    active = true
+    references = @SkySphere.usdz@
+)
+{
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+
+    over "SkySphere_mat"
+    {
+        reorder nameChildren = ["UnlitSurface", "RealityKitTexture2D", "Texcoord", "Swizzle", "Subtract", "Absval", "Ifgreater", "RealityKitTexture2D_1", "Giraffe"]
+        asset inputs:SkySphere_Texture = @Scene_-_Root_diffuse.jpg@ (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-754.4517, 71.84726)
+                    float2 sizeInSubgraph = (188.5, 53)
+                    int stackingOrderInSubgraph = 393
+                }
+            }
+        )
+
+        over "RealityKitTexture2D_1"
+        {
+            bool inputs:no_flip_v = 1
+            int ui:nodegraph:node:stackingOrder = 391
+        }
+
+        def "Giraffe" (
+            active = true
+            references = @Giraffe.usdz@
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.25, 0.25, 0.25)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Meshes"
+            {
+                over "Sketchfab_model" (
+                    active = false
+                )
+                {
+                }
+            }
+
+            over "SkinnedMeshes"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (100, 100, 100)
+                float3 xformOp:translate = (0, -154.1756, 209.71704)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Xform "DirectionalLight"
+    {
+        float3 xformOp:translate = (-112.29358, 197.42227, 101.87712)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "DirectionalLight"
+        {
+            token info:id = "RealityKit.DirectionalLight"
+
+            def RealityKitStruct "Shadow"
+            {
+            }
+        }
+    }
+}
+
