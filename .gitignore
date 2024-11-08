@@ -1,0 +1,12 @@
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependências e build
+node_modules/
+dist/
+
+# Ignorar arquivos de configurações de IDE
+.vscode/
+*.code-workspace
+
