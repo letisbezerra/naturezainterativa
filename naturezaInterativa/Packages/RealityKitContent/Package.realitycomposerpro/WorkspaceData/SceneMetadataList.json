@@ -3,7 +3,8 @@
     "objectMetadataList" : [
       [
         "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
-        "Root"
+        "Root",
+        "Sphere"
       ],
       {
         "isExpanded" : true,
@@ -11,8 +12,7 @@
       },
       [
         "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
-        "Root",
-        "Sphere"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -22,6 +22,26 @@
   },
   "01FCC108-5D47-4E07-84B5-94AC772D5C71" : {
     "objectMetadataList" : [
+      [
+        "01FCC108-5D47-4E07-84B5-94AC772D5C71",
+        "Root",
+        "Giraffe_1",
+        "Meshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "01FCC108-5D47-4E07-84B5-94AC772D5C71",
+        "Root",
+        "Giraffe_1",
+        "SkinnedMeshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
       [
         "01FCC108-5D47-4E07-84B5-94AC772D5C71",
         "Giraffe"
@@ -42,27 +62,19 @@
       },
       [
         "01FCC108-5D47-4E07-84B5-94AC772D5C71",
-        "Root",
-        "Giraffe_1",
-        "Meshes"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "01FCC108-5D47-4E07-84B5-94AC772D5C71",
         "Root"
       ],
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
+      }
+    ]
+  },
+  "4E20CB19-6E83-4619-9CA9-DC255C1169D8" : {
+    "objectMetadataList" : [
       [
-        "01FCC108-5D47-4E07-84B5-94AC772D5C71",
-        "Root",
-        "Giraffe_1",
-        "SkinnedMeshes"
+        "4E20CB19-6E83-4619-9CA9-DC255C1169D8",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -75,20 +87,20 @@
       [
         "8D14D95D-FB11-405C-8907-7F00AD21935E",
         "Root",
-        "SkyDome"
+        "Meshes"
       ],
       {
-        "disallowsFraming" : true,
-        "isExpanded" : false,
+        "isExpanded" : true,
         "isLocked" : false
       },
       [
         "8D14D95D-FB11-405C-8907-7F00AD21935E",
         "Root",
-        "Meshes"
+        "SkyDome"
       ],
       {
-        "isExpanded" : true,
+        "disallowsFraming" : true,
+        "isExpanded" : false,
         "isLocked" : false
       }
     ]
@@ -153,44 +165,35 @@
       [
         "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
         "Root",
+        "SkyDome"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : false,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root",
+        "SkinnedMeshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root",
         "savanna"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root",
-        "Materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root",
-        "Savanna",
-        "Materials"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root",
-        "Savanna",
-        "Meshes"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root"
       ],
       {
         "isExpanded" : true,
@@ -207,8 +210,25 @@
       },
       [
         "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
         "Root",
-        "savanna",
+        "Savanna",
+        "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root",
         "Meshes"
       ],
       {
@@ -218,29 +238,11 @@
       [
         "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
         "Root",
-        "SkinnedMeshes"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root",
+        "Savanna",
         "Meshes"
       ],
       {
         "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
-        "Root",
-        "SkyDome"
-      ],
-      {
-        "disallowsFraming" : true,
-        "isExpanded" : false,
         "isLocked" : false
       },
       [
@@ -248,6 +250,16 @@
         "Root",
         "savanna",
         "Materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "64DCC772-D70A-4DE3-9632-7FFD57BBADFC",
+        "Root",
+        "savanna",
+        "Meshes"
       ],
       {
         "isExpanded" : true,
@@ -276,6 +288,14 @@
     "objectMetadataList" : [
       [
         "1997C977-FC9F-4B47-941B-E8CF95426426",
+        "Giraffe"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "1997C977-FC9F-4B47-941B-E8CF95426426",
         "Root"
       ],
       {
@@ -288,6 +308,18 @@
     "objectMetadataList" : [
       [
         "388995CA-80FC-432E-BA88-78270E4EFD9D",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "896717CB-8365-4CC9-8630-66E8E2CAF65F" : {
+    "objectMetadataList" : [
+      [
+        "896717CB-8365-4CC9-8630-66E8E2CAF65F",
         "Root"
       ],
       {
@@ -312,8 +344,34 @@
         "SkySphere",
         "SkySphere_mat",
         "Giraffe",
-        "SkinnedMeshes",
-        "Sketchfab_model"
+        "SkinnedMeshes"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
+        "SkySphere",
+        "SkySphere_mat"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
+        "Root",
+        "savanna"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
+        "Root",
+        "SkySphere"
       ],
       {
         "isExpanded" : true,
@@ -323,8 +381,7 @@
         "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
         "SkySphere",
         "SkySphere_mat",
-        "Giraffe",
-        "SkinnedMeshes"
+        "Giraffe"
       ],
       {
         "isExpanded" : true,
@@ -344,36 +401,11 @@
       },
       [
         "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
-        "Root",
-        "SkySphere"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
-        "SkySphere",
-        "SkySphere_mat"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
         "SkySphere",
         "SkySphere_mat",
-        "Giraffe"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "FB5EFB0B-BF95-4838-95B7-BD1304C8F20B",
-        "Root",
-        "savanna"
+        "Giraffe",
+        "SkinnedMeshes",
+        "Sketchfab_model"
       ],
       {
         "isExpanded" : true,

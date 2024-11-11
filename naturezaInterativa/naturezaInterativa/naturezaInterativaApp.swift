@@ -10,19 +10,21 @@ import SwiftUI
 @main
 struct naturezaInterativaApp: App {
     
-    @State var loader = EnvironmentLoader()
+    // The view model.
+    @State private var model = ViewModel()
     
     var body: some Scene {
-        
-        WindowGroup(id: "Window") {
-            ContentView(loader: loader)
+        // The main window that presents the app's modules.
+        WindowGroup(id: "modules") {
+            Modules()
+                .environment(model)
         }
-        .windowStyle(.volumetric)
-        
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView(loader: loader)
+        .windowStyle(.plain)
+        // An immersive Space that shows the animals.
+        ImmersiveSpace(id: "immersive") {
+            ImmersiveView()
+                .environment(model)
         }
         .immersionStyle(selection: .constant(.full), in: .full)
     }
-
 }

@@ -1,0 +1,27 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.0.16.0.3)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "Blue_Whale___Textured" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -1.0471975, 0)
+        }
+        prepend references = @Materials/AnimalPlanet/ocean/Animals/Blue_Whale_-_Textured.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.8660254, 0, -0.49999997, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (-1.5, 90, -600)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

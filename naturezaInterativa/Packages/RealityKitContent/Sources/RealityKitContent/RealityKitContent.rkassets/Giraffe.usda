@@ -1,0 +1,48 @@
+#usda 1.0
+(
+    defaultPrim = "Giraffe"
+)
+
+def "Giraffe" (
+    active = true
+    customData = {
+        float3 rotationEulerHint = (0, 2.268928, 0)
+    }
+    prepend references = @Giraffe.usdz@
+)
+{
+    quatf xformOp:orient = (0.42261812, 0, 0.9063078, 0)
+    float3 xformOp:scale = (0.2, 0.2, 0.2)
+    float3 xformOp:translate = (-4, 110.10715, -99.996864)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    over "Meshes"
+    {
+        over "Sketchfab_model" (
+            active = false
+        )
+        {
+        }
+    }
+
+    def "Giraffe" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, -2.268928, 0)
+        }
+        prepend references = @Materials/AnimalPlanet/savanna/Animals/Giraffe.usdz@
+    )
+    {
+        quatf xformOp:orient = (-0.4226182, 0, 0.9063078, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-140.07643, 200.0003, -221.97075)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Meshes" (
+            active = false
+        )
+        {
+        }
+    }
+}
+
