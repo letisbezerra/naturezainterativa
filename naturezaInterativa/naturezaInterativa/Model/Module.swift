@@ -28,6 +28,14 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
         case .polar: "The Polar Regions"
         }
     }
+    
+    var backSound: String {
+        switch self {
+        case .savanna: "savana.mp3"
+        case .ocean: "audio1.mp3"
+        case .polar: "audio1.mp3"
+        }
+    }
 
     var abstract: String {
         switch self {

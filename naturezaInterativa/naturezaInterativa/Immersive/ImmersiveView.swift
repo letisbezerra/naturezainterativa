@@ -17,7 +17,7 @@ struct ImmersiveView: View {
             Animal(animal: model.module.animal[model.animalCount])
                 .id(model.animalCount)
             
-            Field(field: model.module.name)
+            Field(field: model.module.name, sound: model.module.backSound)
         }
         .onAppear {
             model.isShowingImmersive = true
