@@ -11,14 +11,18 @@ import RealityKitContent
 
 struct Animal: View {
     var animal: String
+    @State private var audioPlaybackController: AudioPlaybackController?
+    
     
     var body: some View {
         RealityView { content in
             if let entity = loadEntiry() {
                 content.add(entity)
-                if animal != "Jellyfish" && animal != "White Shark" {
+                //                if animal != "Jellyfish" && animal != "White Shark" {
+                Task {
                     await playAnimalSound(for: entity)
                 }
+                //                }
             }
         } update: { content in
             guard let entity = content.entities.first else {return}
@@ -41,12 +45,9 @@ struct Animal: View {
               let resource = try? await AudioFileResource(named: "/Root/sound_mp3",
                                                           from: animal+".usda",
                                                           in: realityKitContentBundle) else { return }
-            
+        
         let audioPlaybackController = entity.prepareAudio(resource)
         audioPlaybackController.play()
-        audioPlaybackController.completionHandler = { [weak audioPlaybackController] in
-            audioPlaybackController?.play()
-        }
     }
 }
 

@@ -10,25 +10,25 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Blue_Whale___Textured", "sound_mp3", "SpatialAudio"]
+    reorder nameChildren = ["Blue_Whale___Textured", "sound_mp3"]
     def "Blue_Whale___Textured" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0, -1.0471975, 0)
+            float3 rotationEulerHint = (0, -1.2217305, 0)
         }
         references = @Materials/AnimalPlanet/ocean/Animals/Blue_Whale_-_Textured.usdz@
     )
     {
-        quatf xformOp:orient = (0.8660254, 0, -0.49999997, 0)
+        quatf xformOp:orient = (0.81915206, 0, -0.5735764, 0)
         float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (-1.5, 90, -600)
+        float3 xformOp:translate = (-1.5, 90, -400)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
     def RealityKitAudioFile "sound_mp3"
     {
-        uniform asset file = @Materials/AnimalPlanet/ocean/Sounds/681896__mbari_mars__blue-whale-d-calls-audible-only-with-appropriate-speakers.flac@
-        uniform bool shouldLoop = 0
+        uniform asset file = @Materials/AnimalPlanet/ocean/Sounds/681896__mbari_mars__blue-whale-d-calls-audible-only-with-appropriate-speakers.mp3@
+        uniform bool shouldLoop = 1
     }
 
     def Xform "SpatialAudio" (
@@ -38,14 +38,13 @@ def Xform "Root"
     )
     {
         quatf xformOp:orient = (0.5, 0, 0.8660253, 0)
-        float3 xformOp:translate = (-178.25464, 155.42697, -483.80606)
+        float3 xformOp:translate = (-262.8155, 182.60556, -314.664)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "SpatialAudio"
         {
-            float directivityFocus = 0
             uniform token info:id = "RealityKit.SpatialAudio"
-            float rolloffFactor = 1
+            float rolloffFactor = 0.03826711
         }
     }
 }

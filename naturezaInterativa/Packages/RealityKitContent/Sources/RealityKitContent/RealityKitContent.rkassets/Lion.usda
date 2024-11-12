@@ -14,25 +14,25 @@ def Xform "Root"
     def "Lion" (
         active = true
         customData = {
-            float3 rotationEulerHint = (-0.3490659, 0.8726647, -0.3490659)
+            float3 rotationEulerHint = (9.2728364e-8, 0, 0)
         }
         references = @Materials/AnimalPlanet/savanna/Animals/Lion.usdz@
     )
     {
-        quatf xformOp:orient = (0.89172274, -0.08271578, 0.4372033, -0.08271578)
+        quatf xformOp:orient = (1, 4.6364182e-8, 0, 0)
         float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (-2.2206018, 0, -3.2205935)
+        float3 xformOp:translate = (-1.5, 0, -4)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
     def Xform "SpatialAudio" (
         customData = {
-            float3 rotationEulerHint = (0, 3.4906585, 0)
+            float3 rotationEulerHint = (0, 3.1415927, 0)
         }
     )
     {
-        quatf xformOp:orient = (-0.1736482, 0, 0.9848077, 0)
-        float3 xformOp:translate = (-0.67008007, 1.8222847, -2.2644782)
+        quatf xformOp:orient = (-4.371139e-8, 0, 1, 0)
+        float3 xformOp:translate = (-1.5, 1.6414969, -2)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "SpatialAudio"
@@ -45,7 +45,7 @@ def Xform "Root"
     def RealityKitAudioFile "sound_mp3"
     {
         uniform asset file = @Materials/AnimalPlanet/savanna/Sounds/the-lion-purrs-and-fawns-with-the-cubs.mp3@
-        uniform bool shouldLoop = 0
+        uniform bool shouldLoop = 1
     }
 }
 
