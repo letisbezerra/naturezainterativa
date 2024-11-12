@@ -1,47 +1,65 @@
 #usda 1.0
 (
-    defaultPrim = "Giraffe"
+    defaultPrim = "Root"
 )
 
-def "Giraffe" (
+def Xform "Root" (
     active = true
     customData = {
-        float3 rotationEulerHint = (0, 2.268928, 0)
+        float3 rotationEulerHint = (0, 0, 0)
     }
-    prepend references = @Giraffe.usdz@
 )
 {
-    quatf xformOp:orient = (0.42261812, 0, 0.9063078, 0)
-    float3 xformOp:scale = (0.2, 0.2, 0.2)
-    float3 xformOp:translate = (-4, 110.10715, -99.996864)
+    reorder nameChildren = ["Giraffe", "sound_mp3", "SpatialAudio"]
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (100, 100.00002, 100)
+    float3 xformOp:translate = (0, 0, 0)
     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-    over "Meshes"
-    {
-        over "Sketchfab_model" (
-            active = false
-        )
-        {
-        }
-    }
 
     def "Giraffe" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0, -2.268928, 0)
+            float3 rotationEulerHint = (0, 3.8397243, 0)
         }
-        prepend references = @Materials/AnimalPlanet/savanna/Animals/Giraffe.usdz@
+        references = @Materials/AnimalPlanet/savanna/Animals/Giraffe.usdz@
     )
     {
-        quatf xformOp:orient = (-0.4226182, 0, 0.9063078, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (-140.07643, 200.0003, -221.97075)
+        reorder nameChildren = ["Materials", "Meshes", "SkinnedMeshes"]
+        quatf xformOp:orient = (-0.34202012, 0, 0.9396926, 0)
+        float3 xformOp:scale = (5.0000005, 5.0000014, 5.0000005)
+        float3 xformOp:translate = (-500, 0, -1500)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "Meshes" (
             active = false
         )
         {
+        }
+    }
+
+    def RealityKitAudioFile "sound_mp3"
+    {
+        uniform asset file = @Materials/AnimalPlanet/savanna/Sounds/giraffe-growl.mp3@
+        uniform bool shouldLoop = 0
+    }
+
+    def Xform "SpatialAudio" (
+        customData = {
+            float3 rotationEulerHint = (0, -2.6179938, 0)
+        }
+    )
+    {
+        quatf xformOp:orient = (-0.25881907, 0, 0.9659258, 0)
+        float3 xformOp:scale = (6.1998935, 6.1998944, 6.199893)
+        float3 xformOp:translate = (-139.69366, 500.22803, -1069.1248)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "SpatialAudio"
+        {
+            float directivityFocus = 0
+            float gain = 0
+            uniform token info:id = "RealityKit.SpatialAudio"
+            float rolloffFactor = 1
         }
     }
 }
