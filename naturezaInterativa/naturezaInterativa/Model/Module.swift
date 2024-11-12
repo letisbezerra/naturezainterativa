@@ -32,8 +32,8 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
     var backSound: String {
         switch self {
         case .savanna: "savanna.mp3"
-        case .ocean: "audio1.mp3"
-        case .polar: "audio1.mp3"
+        case .ocean: "ocean.mp3"
+        case .polar: "polar.wav"
         }
     }
 
