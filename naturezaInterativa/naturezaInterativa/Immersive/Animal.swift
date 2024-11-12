@@ -14,15 +14,18 @@ struct Animal: View {
     
     var body: some View {
         RealityView { content in
-            if let animal = loadEntiry() {
-                content.add(animal)
+            if let entity = loadEntiry() {
+                content.add(entity)
+                if animal != "Jellyfish" && animal != "White Shark" {
+                    await playAnimalSound(for: entity)
+                }
             }
         } update: { content in
-            guard let animal = content.entities.first else {return}
+            guard let entity = content.entities.first else {return}
             
-            animal.isEnabled = true
-            animal.availableAnimations.forEach { animation in
-                animal.playAnimation(animation.repeat())
+            entity.isEnabled = true
+            entity.availableAnimations.forEach { animation in
+                entity.playAnimation(animation.repeat())
             }
         }
     }
@@ -31,6 +34,19 @@ struct Animal: View {
             named: animal,
             in: realityKitContentBundle
         )
+    }
+    
+    private func playAnimalSound(for entity: Entity) async {
+        guard let entity = entity.findEntity(named: "SpatialAudio"),
+              let resource = try? await AudioFileResource(named: "/Root/sound_mp3",
+                                                          from: animal+".usda",
+                                                          in: realityKitContentBundle) else { return }
+            
+        let audioPlaybackController = entity.prepareAudio(resource)
+        audioPlaybackController.play()
+        audioPlaybackController.completionHandler = { [weak audioPlaybackController] in
+            audioPlaybackController?.play()
+        }
     }
 }
 

@@ -29,8 +29,7 @@ struct TableOfContents: View {
                             .padding(.leading, 70)
                     }
                 
-                Text("Discover a new way of looking at the world.",
-                     comment: "The app's subtitle, appearing immediately below the title in a smaller font, on the splash screen.")
+                Text("Discover a new way of looking at the animal kingdom.")
                     .font(.title)
                     .opacity(model.isTitleFinished ? 1 : 0)
             }
