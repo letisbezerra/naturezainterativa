@@ -67,6 +67,36 @@ def Xform "Root"
             float gain = 0
             uniform token info:id = "RealityKit.SpatialAudio"
         }
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitCustomComponent "RealityKitContent_GestureComponent"
+        {
+            bool canScale = 0
+            uniform token info:id = "RealityKitContent.GestureComponent"
+            bool preserveOrientationOnPivotDrag = 0
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (0, 0, 0)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                }
+            }
+        }
     }
 }
 

@@ -21,8 +21,39 @@ def Xform "Root"
     {
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (-1, 0, -3)
+        float3 xformOp:translate = (-1, 0, -1.6)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitCustomComponent "RealityKitContent_GestureComponent"
+        {
+            bool canScale = 0
+            uniform token info:id = "RealityKitContent.GestureComponent"
+            bool preserveOrientationOnPivotDrag = 0
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (135.77945, 195.3032, 385.47992)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (-0.07203293, 97.96691, 1.9518051)
+                }
+            }
+        }
     }
 
     def RealityKitAudioFile "sound_mp3"
@@ -42,7 +73,7 @@ def Xform "Root"
             bindMaterialAs = "weakerThanDescendants"
         )
         quatf xformOp:orient = (-4.371139e-8, 0, 1, 0)
-        float3 xformOp:translate = (-0.9943119, 1.0252912, -1.8573121)
+        float3 xformOp:translate = (-0.9884034, 0.97705805, -0.4)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "SpatialAudio"

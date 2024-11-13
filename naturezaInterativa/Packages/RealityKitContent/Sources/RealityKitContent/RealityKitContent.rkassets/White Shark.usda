@@ -22,6 +22,37 @@ def Xform "Root"
         float3 xformOp:scale = (0.01, 0.01, 0.01)
         float3 xformOp:translate = (-0.5, 1.5, -1)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def RealityKitComponent "InputTarget"
+        {
+            uniform token info:id = "RealityKit.InputTarget"
+        }
+
+        def RealityKitCustomComponent "RealityKitContent_GestureComponent"
+        {
+            bool canScale = 0
+            uniform token info:id = "RealityKitContent.GestureComponent"
+            bool preserveOrientationOnPivotDrag = 0
+        }
+
+        def RealityKitComponent "Collider"
+        {
+            uint group = 1
+            uniform token info:id = "RealityKit.Collider"
+            uint mask = 4294967295
+            token type = "Default"
+
+            def RealityKitStruct "Shape"
+            {
+                float3 extent = (63.33416, 167.45145, 55.62062)
+                token shapeType = "Box"
+
+                def RealityKitStruct "pose"
+                {
+                    float3 position = (0.5505066, -30.84486, -25.597961)
+                }
+            }
+        }
     }
 }
 

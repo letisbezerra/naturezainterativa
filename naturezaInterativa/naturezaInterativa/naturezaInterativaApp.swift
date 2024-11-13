@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import RealityKitContent
 
 @main
 struct naturezaInterativaApp: App {
-    
     // The view model.
     @State private var model = ViewModel()
+    
+    init() {
+        RealityKitContent.GestureComponent.registerComponent()
+    }
     
     var body: some Scene {
         // The main window that presents the app's modules.

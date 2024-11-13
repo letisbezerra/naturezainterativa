@@ -32,6 +32,7 @@ struct Animal: View {
                 entity.playAnimation(animation.repeat())
             }
         }
+        .installGestures()
     }
     private func loadEntiry() -> Entity? {
         try? Entity.load(
