@@ -14,14 +14,14 @@ def Xform "Root"
     def "Blue_Whale___Textured" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0, -1.2217305, 0)
+            float3 rotationEulerHint = (0, -1.5707963, 0)
         }
         references = @Materials/AnimalPlanet/ocean/Animals/Blue_Whale_-_Textured.usdz@
     )
     {
-        quatf xformOp:orient = (0.81915206, 0, -0.5735764, 0)
+        quatf xformOp:orient = (0.7071068, 0, -0.70710665, 0)
         float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (-1.5, 90, -400)
+        float3 xformOp:translate = (20, 90, -300)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "InputTarget"
@@ -33,6 +33,7 @@ def Xform "Root"
         {
             bool canScale = 0
             uniform token info:id = "RealityKitContent.GestureComponent"
+            bool pivotOnDrag = 0
             bool preserveOrientationOnPivotDrag = 0
         }
 

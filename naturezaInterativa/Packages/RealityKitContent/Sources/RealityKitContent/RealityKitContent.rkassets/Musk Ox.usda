@@ -20,8 +20,8 @@ def Xform "Root"
     )
     {
         quatf xformOp:orient = (0.64278764, 0, -0.7660444, 0)
-        float3 xformOp:scale = (0.01, 0.01, 0.01)
-        float3 xformOp:translate = (-0.26546252, 0, -2.8862276)
+        float3 xformOp:scale = (0.015, 0.015, 0.015)
+        float3 xformOp:translate = (-0.26546252, 0, -3.5)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "Materials" (
@@ -72,6 +72,7 @@ def Xform "Root"
         {
             bool canScale = 0
             uniform token info:id = "RealityKitContent.GestureComponent"
+            bool pivotOnDrag = 0
             bool preserveOrientationOnPivotDrag = 0
         }
     }

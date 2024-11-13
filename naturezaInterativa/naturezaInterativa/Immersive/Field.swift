@@ -52,7 +52,7 @@ struct Field: View {
             
             // Prepara o controlador de áudio
             let audioController = entity.prepareAudio(audioResource)
-//            audioController.gain = 1.0 // Ajuste do volume
+            audioController.gain = 1.0 // Ajuste do volume
             
             audioController.play()
             
