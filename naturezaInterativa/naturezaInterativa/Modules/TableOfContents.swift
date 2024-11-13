@@ -31,6 +31,7 @@ struct TableOfContents: View {
                 
                 Text("Discover a new way of looking at the animal kingdom.")
                     .font(.title)
+//                    .bold()
                     .opacity(model.isTitleFinished ? 1 : 0)
             }
             .alignmentGuide(.earthGuide) { context in
@@ -60,7 +61,7 @@ struct TableOfContents: View {
         .background(alignment: Alignment(horizontal: .center, vertical: .earthGuide)) {
             Image("EarthHalf")
                 .alignmentGuide(.earthGuide) { context in
-                    context[VerticalAlignment.top] + 100
+                    context[VerticalAlignment.top] + 300
                 }
                 .opacity(model.isTitleFinished ? 1 : 0)
                 .accessibility(hidden: true)

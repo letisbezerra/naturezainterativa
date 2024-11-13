@@ -15,7 +15,7 @@ class ViewModel {
     var module: Module = .savanna
     var titleText: String = ""
     var isTitleFinished: Bool = false
-    var finalTitle: String = "Animal Planet"
+    var finalTitle: String = "Interactive Nature"
     // MARK: - Immersive
     var isShowingImmersive: Bool = false
     var animalCount = 0
