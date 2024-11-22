@@ -64,12 +64,13 @@ def Xform "Root"
     )
     {
         quatf xformOp:orient = (-4.371139e-8, 0, 1, 0)
-        float3 xformOp:translate = (-1.5, 1.6414969, -2)
+        float3 xformOp:translate = (-1.984053, 1.1677969, -0.9610145)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def RealityKitComponent "SpatialAudio"
         {
             float directivityFocus = 0
+            float gain = -29.992577
             uniform token info:id = "RealityKit.SpatialAudio"
         }
     }
